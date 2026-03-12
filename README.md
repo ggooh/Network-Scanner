@@ -23,10 +23,11 @@ Um scanner de rede local eficiente desenvolvido em Python, utilizando o protocol
 
 2. **Crie e ative um ambiente virtual:**
     python -m venv venv
+   
     No Windows:
     .\venv\Scripts\activate
 
-3. **Instale as dependências:**
+4. **Instale as dependências:**
     pip install -r requirements.txt
 
 ## Como Usar
@@ -34,6 +35,7 @@ Um scanner de rede local eficiente desenvolvido em Python, utilizando o protocol
 **Nota:** Este programa requer privilégios de Administrador (Windows) ou root (Linux/macOS) para enviar pacotes ARP.
 
 1. **Atualize a base de dados de fabricantes (OUI):**
+   
     python utils/update_oui.py
 
 2. **Execute o scanner:**   
