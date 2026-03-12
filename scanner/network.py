@@ -1,6 +1,7 @@
 import psutil
 import ipaddress 
 import uuid
+import socket
 
 
 
@@ -46,10 +47,24 @@ def get_local_network():
 
 def calculate_network(ip, mask):
     """
-    Calcula a rede e os Hosts possíveis
+    Calcula a rede e os Hosts possíveis.
     """
     
     network = ipaddress.IPv4Network(f"{ip}/{mask}", strict=False)
     hosts = list(network.hosts())
     
     return network, hosts
+
+
+
+def get_hostname(ip):
+    """
+    Tenta obter o nome do dispositivo através do IP.
+    """
+
+    try:
+        
+        return socket.gethostbyaddr(str(ip))[0]     # socket.gethostbyaddr devolve (name, aliaslist, addresslist)
+    
+    except (socket.herror, socket.gaierror, IndexError):
+        return "Unknown"
