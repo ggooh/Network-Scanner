@@ -35,7 +35,6 @@ Um scanner de rede local eficiente desenvolvido em Python, utilizando o protocol
 **Nota:** Este programa requer privilégios de Administrador (Windows) ou root (Linux/macOS) para enviar pacotes ARP.
 
 1. **Atualize a base de dados de fabricantes (OUI):**
-   
     python utils/update_oui.py
 
 2. **Execute o scanner:**   
