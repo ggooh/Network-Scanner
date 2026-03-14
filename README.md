@@ -28,7 +28,7 @@ Um scanner de rede local eficiente desenvolvido em Python, utilizando o protocol
 
 2. **Crie e ative um ambiente virtual:**
     python -m venv venv
-    .\venv\Scripts\activate     # No Windows
+    No Windows: .\venv\Scripts\activate
 
 
 4. **Instale as dependências:**
